@@ -12,11 +12,11 @@ import AuthorCard from "@/components/blog/authorCard";
 export default function Post(preloadImage) {
   // const { loading, post } = props;
 
-  // const slug = post?.slug;
+  const slug = post?.slug;
 
-  // if (!loading && !slug) {
-  //   notFound();
-  // }
+  if (!loading && !slug) {
+    notFound();
+  }
 
   const imageProps = post?.mainImage
     ? urlForImage(post.mainImage)
