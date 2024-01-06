@@ -1,6 +1,7 @@
 export const projectId = "vl2j8045";
 export const dataset = "production";
 
+// Enable CDN in production
 export const useCdn = process.env.NODE_ENV === "production";
 
 export const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2023-03-25";
