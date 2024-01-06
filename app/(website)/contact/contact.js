@@ -60,7 +60,7 @@ export default function Contact({ settings }) {
           <p className="max-w-sm mt-5">
           Please provide a clear and concise message in the "Message" field. Include relevant details about your inquiry to help me understand and address your needs effectively.
           </p>
-          <h1> By submitting this form, you acknowledge that the information you provide will be used to respond to your inquiry. Please review our privacy policy for more information on how we handle your data.</h1>
+          <h5> By submitting this form, you acknowledge that the information you provide will be used to respond to your inquiry. Please review our privacy policy for more information on how we handle your data.</h5>
 
           <div className="mt-5">
             <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
