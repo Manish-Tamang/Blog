@@ -29,7 +29,7 @@ export default function Contact({ settings }) {
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
     settings: {
-      from_name: "John doe",
+      from_name: "User",
       subject: "New Contact Message from Manish Tamang website"
     },
     onSuccess: (msg, data) => {
@@ -55,17 +55,17 @@ export default function Contact({ settings }) {
       <div className="grid my-10 md:grid-cols-2">
         <div className="my-10">
           <h2 className="text-2xl font-semibold dark:text-white">
-            Contact Stablo
+            Contact Me
           </h2>
           <p className="max-w-sm mt-5">
-            Have something to say? We are here to help. Fill up the
-            form or send email or call phone.
+          Please provide a clear and concise message in the "Message" field. Include relevant details about your inquiry to help me understand and address your needs effectively.
           </p>
+          <h1> By submitting this form, you acknowledge that the information you provide will be used to respond to your inquiry. Please review our privacy policy for more information on how we handle your data.</h1>
 
           <div className="mt-5">
             <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
               <MapPinIcon className="w-4 h-4" />
-              <span>1734 Sanfransico, CA 93063</span>
+              <span>Budhanilkantha-12, kathmandu, Nepal</span>
             </div>
             {settings?.email && (
               <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
