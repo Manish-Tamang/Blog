@@ -58,7 +58,7 @@ export default function Contact({ settings }) {
             Contact Me
           </h2>
           <p className="max-w-sm mt-5">
-          Please provide a clear and concise message in the "Message" field. Include relevant details about your inquiry to help me understand and address your needs effectively.
+            Please provide a clear and concise message in the <strong>"Message"</strong> field. Include relevant details about your inquiry to help me understand and address your needs effectively.
           </p>
           <h5 className="max-w-sm mt-5"> By submitting this form, you acknowledge that the information you provide will be used to respond to your inquiry. Please review our privacy policy for more information on how we handle your data.</h5>
 
@@ -97,11 +97,10 @@ export default function Contact({ settings }) {
                 type="text"
                 placeholder="Full Name"
                 autoComplete="false"
-                className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900   focus:ring-4  ${
-                  errors.name
+                className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900   focus:ring-4  ${errors.name
                     ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
                     : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
-                }`}
+                  }`}
                 {...register("name", {
                   required: "Full name is required",
                   maxLength: 80
@@ -124,11 +123,10 @@ export default function Contact({ settings }) {
                 placeholder="Email Address"
                 name="email"
                 autoComplete="false"
-                className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900   focus:ring-4  ${
-                  errors.email
+                className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900   focus:ring-4  ${errors.email
                     ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
                     : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
-                }`}
+                  }`}
                 {...register("email", {
                   required: "Enter your email",
                   pattern: {
@@ -148,11 +146,10 @@ export default function Contact({ settings }) {
               <textarea
                 name="message"
                 placeholder="Your Message"
-                className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white dark:placeholder:text-gray-200 dark:bg-gray-900   rounded-md outline-none  h-36 focus:ring-4  ${
-                  errors.message
+                className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white dark:placeholder:text-gray-200 dark:bg-gray-900   rounded-md outline-none  h-36 focus:ring-4  ${errors.message
                     ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
                     : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
-                }`}
+                  }`}
                 {...register("message", {
                   required: "Enter your Message"
                 })}
