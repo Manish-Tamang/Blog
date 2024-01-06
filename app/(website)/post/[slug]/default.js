@@ -9,7 +9,7 @@ import { parseISO, format } from "date-fns";
 import CategoryLabel from "@/components/blog/category";
 import AuthorCard from "@/components/blog/authorCard";
 
-export default function Post(props) {
+export default function Post(props,preloadImage) {
   const { loading, post } = props;
 
   const slug = post?.slug;
