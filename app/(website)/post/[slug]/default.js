@@ -81,6 +81,7 @@ export default function Post(props) {
           <Image
             src={imageProps.src}
             alt={post.mainImage?.alt || "Thumbnail"}
+            priority={preloadImage ? true : false}
             loading="eager"
             fill
             sizes="100vw"
