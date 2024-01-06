@@ -9,17 +9,17 @@ import { parseISO, format } from "date-fns";
 import CategoryLabel from "@/components/blog/category";
 import AuthorCard from "@/components/blog/authorCard";
 
-export default function Post(props,preloadImage) {
-  const { loading, post } = props;
+export default function Post(preloadImage) {
+  // const { loading, post } = props;
 
-  const slug = post?.slug;
+  // const slug = post?.slug;
 
-  if (!loading && !slug) {
-    notFound();
-  }
+  // if (!loading && !slug) {
+  //   notFound();
+  // }
 
   const imageProps = post?.mainImage
-    ? urlForImage(post?.mainImage)
+    ? urlForImage(post.mainImage)
     : null;
 
   const AuthorimageProps = post?.author?.image
