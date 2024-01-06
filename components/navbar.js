@@ -94,7 +94,7 @@ export default function Navbar(props) {
                       </span>
                   </Link>
                   <Link href="/" className="hidden w-28 dark:block">
-                    {props.logoalt ? (
+                    {/* {props.logoalt ? (
                       <Image
                         {...urlForImage(props.logoalt)}
                         alt="Logo"
@@ -105,7 +105,10 @@ export default function Navbar(props) {
                       <span className="block text-center">
                         Manish
                       </span>
-                    )}
+                    )} */}
+                    <span className="block text-center">
+                        Manish
+                      </span>
                   </Link>
                   <Disclosure.Button
                     aria-label="Toggle Menu"
