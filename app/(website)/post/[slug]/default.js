@@ -80,10 +80,6 @@ export default function Post(props,preloadImage) {
         {imageProps && (
           <Image
             src={imageProps.src}
-            {...(post.mainImage.blurDataURL && {
-              placeholder: "blur",
-              blurDataURL: post.mainImage.blurDataURL
-            })}
             alt={post.mainImage?.alt || "Thumbnail"}
             priority={preloadImage = true }
             loading="eager"
