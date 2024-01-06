@@ -21,9 +21,9 @@ export default function Navbar(props) {
     //   href: "/about"
     // },
     // {
-    //   label: "Contact",
-    //   href: "/contact"
-    // }
+      label: "Contact",
+      href: "/contact"
+    }
   ];
 
   const rightmenu = [
