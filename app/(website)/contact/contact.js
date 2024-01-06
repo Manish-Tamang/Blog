@@ -24,13 +24,13 @@ export default function Contact({ settings }) {
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
   // Please update the Access Key in the Sanity CMS - Site Congig Page
-  const apiKey = settings?.w3ckey || "cecb189a-5fc5-48fb-b3ab-7b4d5c9da471";
+  const apiKey = settings?.w3ckey || "YOUR_ACCESS_KEY_HERE";
 
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
     settings: {
-      from_name: "Stablo Template",
-      subject: "New Contact Message from Manish Tamang"
+      from_name: "John doe",
+      subject: "New Contact Message from Manish Tamang website"
     },
     onSuccess: (msg, data) => {
       setIsSuccess(true);
@@ -49,22 +49,23 @@ export default function Contact({ settings }) {
         Contact
       </h1>
       <div className="text-center">
-        <p className="text-lg">I can make your website in less payments</p>
+        <p className="text-lg">We are a here to help.</p>
       </div>
 
       <div className="grid my-10 md:grid-cols-2">
         <div className="my-10">
           <h2 className="text-2xl font-semibold dark:text-white">
-            Contact To मनिष 
+            Contact Stablo
           </h2>
           <p className="max-w-sm mt-5">
-            Feel free to share your experience with me or Contact me with this Form
+            Have something to say? We are here to help. Fill up the
+            form or send email or call phone.
           </p>
 
           <div className="mt-5">
             <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
               <MapPinIcon className="w-4 h-4" />
-              <span>Budhanilkantha-12, Kathmandu</span>
+              <span>1734 Sanfransico, CA 93063</span>
             </div>
             {settings?.email && (
               <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
