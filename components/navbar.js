@@ -77,7 +77,7 @@ export default function Navbar(props) {
                 </div>
                 <div className="flex w-full items-center justify-between md:w-auto">
                   <Link href="/" className="w-28 dark:hidden">
-                    {props.logo ? (
+                    {/* {props.logo ? (
                       <Image
                         {...urlForImage(props.logo)}
                         alt="Logo"
@@ -88,7 +88,10 @@ export default function Navbar(props) {
                       <span className="block text-center">
                         Manish
                       </span>
-                    )}
+                    )} */}
+                    <span className="block text-center">
+                        Manish
+                      </span>
                   </Link>
                   <Link href="/" className="hidden w-28 dark:block">
                     {props.logoalt ? (
