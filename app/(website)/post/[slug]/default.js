@@ -13,15 +13,12 @@ import CategoryLabel from "@/components/blog/category";
 import AuthorCard from "@/components/blog/authorCard";
 
 export default function Post() {
-  const paramsForQuery = {
-    pageIndex: 0, // Change this if you want to start from a different index
-    limit: POSTS_PER_PAGE
-  };
+  const [isLoading, setIsLoading] = useState(false);
   const {
     data: post,
     error,
     isValidating
-  } = useSWR([paginatedquery, paramsForQuery], fetcher, {
+  } = useSWR([paginatedquery], fetcher, {
     fallbackData: [],
     onSuccess: () => {
       setIsLoading(false); // You need to define setIsLoading somewhere

@@ -13,6 +13,7 @@ import {
   PhoneIcon
 } from "@heroicons/react/24/outline";
 export default function Contact() {
+  const [isLoading, setIsLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -24,15 +25,12 @@ export default function Contact() {
   } = useForm({
     mode: "onTouched"
   });
-  const paramsForQuery = {
-    pageIndex: 0, // Change this if you want to start from a different index
-    limit: POSTS_PER_PAGE
-  };
+  
   const {
     data: settings,
     error,
     isValidating
-  } = useSWR([paginatedquery, paramsForQuery], fetcher, {
+  } = useSWR([paginatedquery], fetcher, {
     fallbackData: [], // Use an empty array as fallback data
     onSuccess: () => {
       setIsLoading(false);
