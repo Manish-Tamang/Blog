@@ -6,7 +6,7 @@ import { PortableText } from "@/lib/sanity/plugins/portabletext";
 import { urlForImage } from "@/lib/sanity/image";
 import { parseISO, format } from "date-fns";
 import { fetcher } from "@/lib/sanity/client";
-import useSWR from "swr";
+import {useSWR} from "swr";
 import { paginatedquery } from "@/lib/sanity/groq";
 
 import CategoryLabel from "@/components/blog/category";
