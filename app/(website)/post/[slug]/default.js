@@ -25,7 +25,6 @@ export default function Post() {
     }
   });
 
-  const isLoading = false; // You need to define isLoading somewhere
 
   const slug = post?.slug;
 
