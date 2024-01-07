@@ -24,7 +24,10 @@ export default function Contact() {
   } = useForm({
     mode: "onTouched"
   });
-
+  const paramsForQuery = {
+    pageIndex: 0, // Change this if you want to start from a different index
+    limit: POSTS_PER_PAGE
+  };
   const {
     data: settings,
     error,

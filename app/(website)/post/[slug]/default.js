@@ -13,6 +13,10 @@ import CategoryLabel from "@/components/blog/category";
 import AuthorCard from "@/components/blog/authorCard";
 
 export default function Post({ paramsForQuery }) {
+  const paramsForQuery = {
+    pageIndex: 0, // Change this if you want to start from a different index
+    limit: POSTS_PER_PAGE
+  };
   const {
     data: post,
     error,
