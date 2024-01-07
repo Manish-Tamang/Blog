@@ -12,7 +12,7 @@ import {
   EnvelopeIcon,
   PhoneIcon
 } from "@heroicons/react/24/outline";
-export default function Contact({ settings }) {
+export default function Contact() {
   const {
     register,
     handleSubmit,
