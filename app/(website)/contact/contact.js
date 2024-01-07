@@ -4,6 +4,9 @@ import Container from "@/components/container";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react";
+import { fetcher } from "@/lib/sanity/client";
+import useSWR from "swr";
+import { paginatedquery } from "@/lib/sanity/groq";
 import {
   MapPinIcon,
   EnvelopeIcon,
@@ -20,6 +23,17 @@ export default function Contact({ settings }) {
     formState: { errors, isSubmitSuccessful, isSubmitting }
   } = useForm({
     mode: "onTouched"
+  });
+
+  const {
+    data: settings,
+    error,
+    isValidating
+  } = useSWR([paginatedquery, paramsForQuery], fetcher, {
+    fallbackData: [], // Use an empty array as fallback data
+    onSuccess: () => {
+      setIsLoading(false);
+    }
   });
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
