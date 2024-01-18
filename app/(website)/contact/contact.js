@@ -64,6 +64,7 @@ export default function Contact() {
         Contact
       </h1>
       <div className="text-center">
+        <p className="text-lg">Feel This form</p>
         <p className="text-lg">I'am here to help.</p>
       </div>
 
