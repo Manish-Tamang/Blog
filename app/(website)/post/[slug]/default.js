@@ -18,12 +18,12 @@ export default function Post(props) {
     notFound();
   }
 
-  const imageProps = post?.mainImage
-    ? urlForImage(post?.mainImage)
+  const imageProps = props?.mainImage
+    ? urlForImage(props?.mainImage)
     : null;
 
-  const AuthorimageProps = post?.author?.image
-    ? urlForImage(post.author.image)
+  const AuthorimageProps = props?.author?.image
+    ? urlForImage(props.author.image)
     : null;
 
   return (
@@ -31,21 +31,21 @@ export default function Post(props) {
       <Container className="!pt-0">
         <div className="mx-auto max-w-screen-md ">
           <div className="flex justify-center">
-            <CategoryLabel categories={post.categories} />
+            <CategoryLabel categories={props.categories} />
           </div>
 
           <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
-            {post.title}
+            {props.title}
           </h1>
 
           <div className="mt-3 flex justify-center space-x-3 text-gray-500 ">
             <div className="flex items-center gap-3">
               <div className="relative h-10 w-10 flex-shrink-0">
                 {AuthorimageProps && (
-                  <Link href={`/author/${post.author.slug.current}`}>
+                  <Link href={`/author/${props.author.slug.current}`}>
                     <Image
                       src={AuthorimageProps.src}
-                      alt={post?.author?.name}
+                      alt={props?.author?.name}
                       className="rounded-full object-cover"
                       fill
                       sizes="40px"
@@ -55,8 +55,8 @@ export default function Post(props) {
               </div>
               <div>
                 <p className="text-gray-800 dark:text-gray-400">
-                  <Link href={`/author/${post.author.slug.current}`}>
-                    {post.author.name}
+                  <Link href={`/author/${props.author.slug.current}`}>
+                    {props.author.name}
                   </Link>
                 </p>
                 <div className="flex items-center space-x-2 text-sm">
@@ -92,7 +92,7 @@ export default function Post(props) {
       <Container>
         <article className="mx-auto max-w-screen-md ">
           <div className="prose mx-auto my-3 dark:prose-invert prose-a:text-blue-600">
-            {post.body && <PortableText value={post.body} />}
+            {post.body && <PortableText value={props.body} />}
           </div>
           <div className="mb-7 mt-7 flex justify-center">
             <Link
