@@ -1,9 +1,11 @@
 import PostPage from "./default";
 import { getAllPostsSlugs, getPostBySlug } from "@/lib/sanity/client";
 
-export async function getServerSideProps({ params }) {
+const PostDefault = ({ post }) => <PostPage post={post} />;
+
+PostDefault.getInitialProps = async ({ query }) => {
   try {
-    const post = await getPostBySlug(params.slug);
+    const post = await getPostBySlug(query.slug);
 
     if (!post) {
       return {
@@ -12,9 +14,7 @@ export async function getServerSideProps({ params }) {
     }
 
     return {
-      props: {
-        post,
-      },
+      post,
     };
   } catch (error) {
     console.error("Error fetching post:", error);
@@ -22,8 +22,6 @@ export async function getServerSideProps({ params }) {
       notFound: true,
     };
   }
-}
+};
 
-export default function PostDefault({ post }) {
-  return <PostPage post={post} />;
-}
+export default PostDefault;
