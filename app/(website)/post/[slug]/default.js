@@ -31,18 +31,18 @@ export default function Post(props) {
       <Container className="!pt-0">
         <div className="mx-auto max-w-screen-md ">
           <div className="flex justify-center">
-            <CategoryLabel categories={props.categories} />
+            <CategoryLabel categories={post.categories} />
           </div>
 
           <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
-            {props.title}
+            {post.title}
           </h1>
 
           <div className="mt-3 flex justify-center space-x-3 text-gray-500 ">
             <div className="flex items-center gap-3">
               <div className="relative h-10 w-10 flex-shrink-0">
                 {AuthorimageProps && (
-                  <Link href={`/author/${props.author.slug.current}`}>
+                  <Link href={`/author/${post.author.slug.current}`}>
                     <Image
                       src={AuthorimageProps.src}
                       alt={post?.author?.name}
@@ -55,7 +55,7 @@ export default function Post(props) {
               </div>
               <div>
                 <p className="text-gray-800 dark:text-gray-400">
-                  <Link href={`/author/${props.author.slug.current}`}>
+                  <Link href={`/author/${post.author.slug.current}`}>
                     {post.author.name}
                   </Link>
                 </p>
