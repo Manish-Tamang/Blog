@@ -18,12 +18,12 @@ export default function Post(props) {
     notFound();
   }
 
-  const imageProps = props?.mainImage
-    ? urlForImage(props?.mainImage)
+  const imageProps = post?.mainImage
+    ? urlForImage(post?.mainImage)
     : null;
 
-  const AuthorimageProps = props?.author?.image
-    ? urlForImage(props.author.image)
+  const AuthorimageProps = post?.author?.image
+    ? urlForImage(post.author.image)
     : null;
 
   return (
@@ -45,7 +45,7 @@ export default function Post(props) {
                   <Link href={`/author/${props.author.slug.current}`}>
                     <Image
                       src={AuthorimageProps.src}
-                      alt={props?.author?.name}
+                      alt={post?.author?.name}
                       className="rounded-full object-cover"
                       fill
                       sizes="40px"
@@ -56,7 +56,7 @@ export default function Post(props) {
               <div>
                 <p className="text-gray-800 dark:text-gray-400">
                   <Link href={`/author/${props.author.slug.current}`}>
-                    {props.author.name}
+                    {post.author.name}
                   </Link>
                 </p>
                 <div className="flex items-center space-x-2 text-sm">
@@ -92,7 +92,7 @@ export default function Post(props) {
       <Container>
         <article className="mx-auto max-w-screen-md ">
           <div className="prose mx-auto my-3 dark:prose-invert prose-a:text-blue-600">
-            {post.body && <PortableText value={props.body} />}
+            {post.body && <PortableText value={post.body} />}
           </div>
           <div className="mb-7 mt-7 flex justify-center">
             <Link
