@@ -33,11 +33,9 @@ export default function Post(props) {
             <CategoryLabel categories={post.categories} />
           </div>
 
-          <Head>
-        <title>{post.title} - Your Site Name</title>
-        <meta name="description" content={post.title || 'Default description'} />
-        {/* Add other meta tags as needed */}
-      </Head>
+          <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
+            {post.title}
+          </h1>
 
           <div className="mt-3 flex justify-center space-x-3 text-gray-500 ">
             <div className="flex items-center gap-3">
