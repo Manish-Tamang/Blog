@@ -7,7 +7,7 @@ export async function sharedMetaData(params) {
   const settings = await getSettings();
 
   return {
-    // metadataBase: new URL(settings.url),
+    metadataBase: new URL(settings.url),
     title: {
       default: settings?.title || "Manish Tamang",
       template: "%s | Manish"
@@ -16,7 +16,7 @@ export async function sharedMetaData(params) {
       settings?.description ||
       "Manish Tamang, a 16-year-old from Kathmandu, Nepal, with a fervent passion for web development. My journey in the world of coding began at a young age, and I've immersed myself in creating captivating websites using React, Next.js, and Tailwind CSS. My ambition is to evolve into a full-stack developer, adept at both front-end and back-end development, enabling me to craft powerful and versatile web applications. With every project, I'm honing my skills and knowledge, eager to embrace the dynamic landscape of technology and make a meaningful impact.",
     keywords: ["Next.js", "Sanity", "Tailwind CSS", "Manish Tamang", "Prashanti Academy"],
-    authors: [{ name: "Surjith" }],
+    authors: [{ name: "Manish" }],
     canonical: settings?.url,
     openGraph: {
       images: [
@@ -57,4 +57,4 @@ export default async function Layout({ children, params }) {
   );
 }
 // enable revalidate for all pages in this layout
-// export const revalidate = 60;
+export const revalidate = 60;
