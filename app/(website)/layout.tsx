@@ -7,7 +7,7 @@ export async function sharedMetaData(params) {
   const settings = await getSettings();
 
   return {
-    metadataBase: new URL(settings.url),
+    // metadataBase: new URL(settings.url),
     title: {
       default: settings?.title || "Manish Tamang",
       template: "%s | Manish"
@@ -57,4 +57,4 @@ export default async function Layout({ children, params }) {
   );
 }
 // enable revalidate for all pages in this layout
-export const revalidate = 60;
+// export const revalidate = 60;
