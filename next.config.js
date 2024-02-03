@@ -20,7 +20,7 @@ module.exports = {
   ...nextConfig,
   images: {
     ...nextConfig.images,
-    domains: ['cdn.sanity.io'], // Add this line with your actual domain
+    domains: ['https://www.manishtamang.xyz/'], // Add this line with your actual domain
   },
   // Additional configuration options, if needed
   // metadataBase: 'https://your-deployed-url.com', // This line is not necessary
