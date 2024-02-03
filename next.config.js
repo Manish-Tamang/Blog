@@ -9,17 +9,19 @@ const nextConfig = {
     remotePatterns: [{ hostname: "cdn.sanity.io" }],
   },
   typescript: {
-    // Set this to false if you want production builds to abort if there's type errors
-    ignoreBuildErrors: process.env.VERCEL_ENV === "production"
+    ignoreBuildErrors: process.env.VERCEL_ENV === "production",
   },
   eslint: {
-    // Set this to false if you want production builds to abort if there's lint errors
-    ignoreDuringBuilds: process.env.VERCEL_ENV === "production"
-  },
-  // Move metadataBase outside of the images configuration
-  images: {
-    metadataBase: 'https://www.manishtamang.xyz/', // Add this line with your actual deployed URL
+    ignoreDuringBuilds: process.env.VERCEL_ENV === "production",
   },
 };
 
-module.exports = nextConfig;
+module.exports = {
+  ...nextConfig,
+  images: {
+    ...nextConfig.images,
+    domains: ['cdn.sanity.io'], // Add this line with your actual domain
+  },
+  // Additional configuration options, if needed
+  // metadataBase: 'https://your-deployed-url.com', // This line is not necessary
+};
