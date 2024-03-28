@@ -26,7 +26,7 @@ export default function Footer(props) {
         <span>
           {" "}
           <a
-            href="https://github.com/Manishtmang"
+            href="https://github.com/Manish-Tamang"
             rel="noopener"
             target="_blank">
             Github
