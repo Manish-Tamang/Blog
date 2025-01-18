@@ -7,8 +7,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const post = await getPostBySlug(params.slug);
-
+  const {slug} = params;
+    const post = await getPostBySlug(slug);
   const imageProps = post?.mainImage
     ? urlForImage(post?.mainImage)
     : null;
@@ -34,6 +34,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function PostDefault({ params }) {
-  const post = await getPostBySlug(params.slug);
+  const {slug} = params;
+  const post = await getPostBySlug(slug);
   return <PostPage post={post} />;
 }

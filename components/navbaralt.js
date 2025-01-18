@@ -24,13 +24,13 @@ const rightmenu = [
   },
   {
     label: "Github",
-    href: "https://github.com/web3templates/stablo-astro",
+    href: "https://github.com/Manish-Tamang",
     external: true,
     badge: "new",
   },
   {
     label: "Download",
-    href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
+    href: "https://github.com/Manish-Tamang",
     external: true,
   },
 ];

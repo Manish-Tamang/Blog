@@ -31,6 +31,7 @@ const client = projectId
   : null;
 
 export const fetcher = async ([query, params]) => {
+    console.log("fetcher called", query, params);
   return client ? client.fetch(query, params) : [];
 };
 
@@ -60,6 +61,8 @@ export async function getSettings() {
 }
 
 export async function getPostBySlug(slug) {
+    console.log("getPostBySlug called with slug", slug)
+    if(!slug) return {}
   if (client) {
     return (await client.fetch(singlequery, { slug })) || {};
   }
@@ -83,6 +86,8 @@ export async function getAllAuthorsSlugs() {
 }
 
 export async function getAuthorPostsBySlug(slug) {
+    console.log("getAuthorPostsBySlug called with slug", slug)
+    if(!slug) return {}
     if (client) {
       return (await client.fetch(postsbyauthorquery, { slug })) || {};
     }
