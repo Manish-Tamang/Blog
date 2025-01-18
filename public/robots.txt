@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://goleblog.vercel.app
+
+# Sitemaps
+Sitemap: https://goleblog.vercel.app/sitemap.xml
