@@ -8,10 +8,10 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const post = await getPostBySlug(params.slug);
+
   const imageProps = post?.mainImage
     ? urlForImage(post?.mainImage)
     : null;
-
   return {
     title: post.title,
     description: post.excerpt || " ",

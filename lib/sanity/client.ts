@@ -75,19 +75,20 @@ export async function getAllPostsSlugs() {
 }
 // Author
 export async function getAllAuthorsSlugs() {
-  if (client) {
-    const slugs = (await client.fetch(authorsquery)) || [];
-    return slugs.map(slug => ({ author: slug }));
-  }
-  return [];
+    if (client) {
+      const slugs = (await client.fetch(authorsquery)) || [];
+      return slugs.map(slug => ({ author: slug }));
+    }
+    return [];
 }
 
 export async function getAuthorPostsBySlug(slug) {
-  if (client) {
-    return (await client.fetch(postsbyauthorquery, { slug })) || {};
-  }
-  return {};
+    if (client) {
+      return (await client.fetch(postsbyauthorquery, { slug })) || {};
+    }
+    return {};
 }
+
 
 export async function getAllAuthors() {
   if (client) {
