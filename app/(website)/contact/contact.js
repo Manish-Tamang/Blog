@@ -45,7 +45,7 @@ export default function Contact() {
     access_key: apiKey,
     settings: {
       from_name: "User",
-      subject: "New Contact Message from Manish Tamang website"
+      subject: "New Contact Message from goleblog.vercel.app"
     },
     onSuccess: (msg, data) => {
       setIsSuccess(true);
